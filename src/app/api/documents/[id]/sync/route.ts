@@ -14,7 +14,7 @@ const SyncPayloadSchema = z.object({
     .string()
     .max(700_000, 'Payload too large')
     .regex(/^[A-Za-z0-9+/=]+$/, 'Invalid base64'),
-  clientClock: z.number().int().nonneg(),
+  clientClock: z.number().int().nonnegative(),
   userId: z.string(),
 });
 
