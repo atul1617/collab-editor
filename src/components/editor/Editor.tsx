@@ -21,7 +21,7 @@ function EditorInner({ onContentChange, ref }: EditorProps & { ref: any }) {
 
   const editor = useEditor({
     extensions: [
-      StarterKit.configure({ history: false }),
+      StarterKit.configure({ undoRedo: false }),
       Collaboration.configure({ document: ydoc! }),
     ],
     editable: role !== 'viewer',
