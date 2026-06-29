@@ -2,7 +2,7 @@ import { WebSocketServer, WebSocket } from 'ws';
 import * as http from 'http';
 import * as Y from 'yjs';
 
-const PORT = 1234;
+const PORT = parseInt(process.env.PORT ?? '1234');
 
 // In-memory store: documentId → Yjs doc + connected clients
 const docs = new Map<string, Y.Doc>();
